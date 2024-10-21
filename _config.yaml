@@ -1,5 +1,24 @@
-remote_theme: pages-themes/cayman@v0.2.0
+# Site settings
+title: Sonia Poltoratski, PhD
+description: 
+
+# Social media usernames (without @ symbol)
+github_username: soniapolt
+twitter_username: soniapolt
+linkedin_username: soniapolt
+
+# Profile photo path
+avatar: /assets/images/headshot.JPG
+
+# Theme settings
+theme: jekyll-theme-minimal
+remote_theme: pages-themes/minimal@v0.2.0
+
+# Styling
+css:
+  - /assets/css/custom.css
+
+# Plugins
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-title: [Sonia Poltoratski]
-description: [WIP]
+  - jekyll-seo-tag
+  - jekyll-remote-theme

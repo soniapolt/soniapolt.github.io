@@ -1,0 +1,172 @@
+---
+---
+
+@import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+/* Apply Helvetica Neue Light throughout the site */
+body {
+    font-family: 'Helvetica Neue Light', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+}
+
+/* Accent font for title (h1) and h2 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #159957; /* Accent color for all headings */
+}
+
+/* Wrapper adjustments */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 30px; /* Add space at the top */
+}
+
+/* Header/navigation positioning */
+header {
+  width: 270px;
+  position: fixed;
+  top: 30px; /* Match wrapper padding-top */
+  left: 50%;
+  transform: translateX(-500px); /* Half of max-width minus some space */
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+  max-height: calc(100vh - 60px); /* Full height minus top padding */
+}
+
+/* Main content positioning */
+section {
+  width: calc(100% - 270px);
+  float: right;
+  padding: 20px;
+  margin-left: 270px;
+  min-height: 100vh; /* Ensure content area is at least full height */
+}
+
+/* Navigation Panel Styles */
+.site-nav {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-photo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ecf0f1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.site-nav h1 {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.site-nav h1 a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.site-description {
+  text-align: center;
+  color: #bdc3c7;
+  margin-bottom: 2rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #ecf0f1;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #34495e;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #34495e;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: #3498db;
+}
+
+.fab {
+  font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media print, screen and (max-width: 960px) {
+  .wrapper {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  
+  header {
+    width: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 20px;
+    max-height: none;
+  }
+  
+  section {
+    width: auto;
+    float: none;
+    margin-left: 0;
+  }
+}
+
+/* Optional: Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}
