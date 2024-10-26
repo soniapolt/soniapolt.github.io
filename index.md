@@ -12,7 +12,3 @@ Hello! I'm Sonia. This site is a work in progress.
 {{ post.excerpt }}
 [Read more]({{ post.url }})
 {% endfor %} -->
-
-### Contact
-
-Get in touch: soniapolt (at) gmail
