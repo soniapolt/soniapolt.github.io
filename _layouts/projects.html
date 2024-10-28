@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+{%- comment -%} _layouts/projects.html {%- endcomment -%}
+
+<div class="projects-container">
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  {% if page.description %}
+  <div class="page-description">
+    {{ page.description | markdownify }}
+  </div>
+  {% endif %}
+
+  <div class="projects-grid">
+    {% for project in page.projects %}
+    <div class="project-card">
+      <div class="project-media">
+        {% if project.image %}
+        <img 
+          src="{{ project.image | relative_url }}" 
+          alt="{{ project.title }} visualization"
+          class="project-image"
+        />
+        {% endif %}
+      </div>
+
+      <div class="project-content">
+        <h2 class="project-title" id="{{ project.title | slugify }}">
+          {{ project.title }}
+        </h2>
+
+        <div class="project-description">
+          {{ project.description | markdownify }}
+        </div>
+
+        {% if project.papers %}
+        <div class="project-papers">
+          <h3>Selected Publication</h3>
+          <ul class="papers-list">
+            {% for paper in project.papers %}
+            <li class="paper-item">
+              <div class="paper-citation">{{ paper.citation }}</div>
+              <div class="paper-links">
+                {% if paper.url %}
+                <a href="{{ paper.url }}" class="paper-link" target="_blank">
+                  <i class="fa-solid fa-file-lines link-icon"></i>Paper
+                </a>
+                {% endif %}
+                {% if paper.github %}
+                <a href="{{ paper.github }}" class="paper-link" target="_blank">
+                  <i class="fa-brands fa-github link-icon"></i>Code
+                </a>
+                {% endif %}
+                {% if paper.media %}
+                <a href="{{ paper.media }}" class="paper-link" target="_blank">
+                  <i class="fa-solid fa-newspaper link-icon"></i>Blog Post
+                </a>
+                {% endif %}
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if project.media or project.github %}
+        <div class="project-links">
+          {% if project.media %}
+          <a href="{{ project.media }}" class="project-link">
+            <span class="link-icon">📝</span>Project Blog
+          </a>
+          {% endif %}
+          {% if project.github %}
+          <a href="{{ project.github }}" class="project-link">
+            <span class="link-icon">💻</span>Main Repository
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+ 

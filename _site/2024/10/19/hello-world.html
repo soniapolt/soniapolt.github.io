@@ -23,7 +23,8 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-19T00:00:00-04:00","datePublished":"2024-10-19T00:00:00-04:00","description":"This is my first blog post! You can write your content here using Markdown.","headline":"Hello World","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/10/19/hello-world.html"},"url":"http://localhost:4000/2024/10/19/hello-world.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=fab16d4c372565ce0907c63ed3f4f296b7c33c28">
+    <link rel="stylesheet" href="/assets/css/style.css?v=eb20c203b85a3dbdf2b326ec7c58079d5e6afbbc">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -41,21 +42,53 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1><a href="http://localhost:4000/">Sonia Poltoratski, PhD</a></h1>
 
-        
+      <header class="site-nav">
+    
+      <div class="profile-photo">
+        <img src="/assets/images/headshot_sf.png" alt="Profile Photo" class="avatar" />
+      </div>
+    
+  
+    <h1><a href="http://localhost:4000/">Sonia Poltoratski, PhD</a></h1>
+  
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/neuro">Neuroscience</a></li>
+        <li><a href="/ML">Human Data for ML</a></li>
+        <li><a href="/other">Side Quests</a></li>
+      </ul>
+    </nav>
+  
+    <div class="social-links">
+      
+        <a href="https://github.com/soniapolt" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      
+      
+        <a href="https://twitter.com/soniapolt" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+      
+      
+        <a href="https://linkedin.com/in/soniapolt" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      
+      
+        <a href="https://scholar.google.com/citations?user=vnrWoQwAAAAJ" target="_blank" class="social-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+      
+      
+        <a href="mailto:soniapolt@gmail.com" class="social-icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+      
+    </div>
+  </header>
 
-        <p></p>
-
-        
-        <p class="view"><a href="https://github.com/soniapolt/soniapolt.github.io">View the Project on GitHub <small>soniapolt/soniapolt.github.io</small></a></p>
-        
-
-        
-
-        
-      </header>
       <section>
 
       <p>This is my first blog post! You can write your content here using Markdown.</p>
@@ -71,10 +104,6 @@
 
       </section>
       <footer>
-        
-        <p>This project is maintained by <a href="https://github.com/soniapolt">soniapolt</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="/assets/js/scale.fix.js"></script>
